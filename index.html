@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina: Introdução a Computação</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.png" />
+    <style>
+        * {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 1px;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: url(./img/paralax1.png); 
+            background-position-x: 0%;
+            background-size: auto 100%;
+            animation: moveBg 2000s infinite linear;
+        }
+
+        .mainContainer {
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background: rgba(0, 8, 93, .84);
+            border-radius: 30px;
+            color: #00e3ff;
+        }
+
+        
+        .paralax {
+            background: url(./img/paralax2top.png); 
+            background-position-x: 0%;
+            background-size: auto 100%;
+            animation: moveParalax 100s infinite linear; 
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+        }
+        .paralaxBottom {
+            transform: rotate(180deg);
+            bottom: 0;
+            animation-name: moveBg;
+        }
+
+        @keyframes moveBg {
+            0% {
+                background-position-x: 0%;
+            }
+            50% {
+                background-position-x: 1000%;
+            }
+            100% {
+                background-position-x: 0%;
+            }
+        }
+        @keyframes moveParalax {
+            0% {
+                background-position-x: 0%;
+            }
+            50% {
+                background-position-x: -1000%;
+            }
+            100% {
+                background-position-x: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="paralax"></div>
+    
+    <div class="mainContainer">
+        <h1>Comunicado:</h1>
+        <p> Este site vai conter o link de todas os encontros, das atividade e dos Slides para organizar a vida quem está acompanhando a oficina! </p>
+        <br>
+        <p> O site ainda está em construção, mas estara funcionando em breve! </p>
+    </div>
+
+    <div class="paralax paralaxBottom"></div>
+</body>
+</html>
