@@ -21,7 +21,7 @@
             height: 100%;
         }
         body {
-            background: url(./img/paralax21.png); 
+            background: url(./img/paralax1.png); 
             background-position-x: 0%;
             background-size: auto 100%;
             animation: moveBg 2000s infinite linear;
@@ -53,6 +53,7 @@
             border-radius: 30px;
             color: #00e3ff;
             text-align: center;
+            overflow: scroll;
         }
         a:visited, a {
             color: #00e3ff;
@@ -61,6 +62,7 @@
         table {
             border-collapse: collapse;
             text-align: center;
+            width: 100%;
         }
         table td, table th {
             border: 1px solid #00e3ff;
@@ -111,7 +113,7 @@
         }
         
         .paralax {
-            background: url(./img/paralax22.png); 
+            background: url(./img/paralax2.png); 
             background-position-x: 0%;
             background-size: auto 100%;
             animation: moveParalax 1000s infinite linear; 
@@ -149,6 +151,25 @@
                 background-position-x: 0%;
             }
         }
+
+        @media only screen and (max-width: 550px) {
+            body {
+                background: url(./img/paralax1_low.png);
+            } 
+            .paralax {
+                background: url(./img/paralax2_low.png); 
+                background-position-x: 0%;
+                background-size: auto 100%;
+            }
+            .mainContainer {
+                width: 100%;
+                border-radius: 0;
+            }
+            .mainTitle {
+                top: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
