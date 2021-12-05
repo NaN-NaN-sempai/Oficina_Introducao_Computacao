@@ -10,6 +10,10 @@
             margin: 0;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             letter-spacing: 1px;
+            cursor: context-menu;
+        }
+        a {
+            cursor: pointer;
         }
         html, body {
             height: 100%;
@@ -21,9 +25,23 @@
             animation: moveBg 2000s infinite linear;
         }
 
+        .mainTitle {
+            position: absolute;
+            right: 50%;
+            top: 30px;
+            text-align: center;
+            transform: translateX(50%);
+            color: #00e3ff;
+            background: rgb(31 0 232); 
+            padding-left: 15px; 
+            padding-right: 15px;
+            border-radius: 15px;
+            z-index: 1;
+        }
+
         .mainContainer {
             padding: 20px;
-            width: 80%;
+            width: fit-content;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -32,8 +50,63 @@
             background: rgba(0, 8, 93, .84);
             border-radius: 30px;
             color: #00e3ff;
+            text-align: center;
+        }
+        a:visited, a {
+            color: #00e3ff;
         }
 
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table td, table th {
+            border: 1px solid #00e3ff;
+            padding: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        table th {
+            color: #fe102a;
+        }
+        table tr:first-child th {
+            border-top: 0;
+        }
+        table tr:last-child td {
+            border-bottom: 0;
+        }
+        table tr td:first-child,
+        table tr th:first-child {
+            border-left: 0;
+        }
+        table tr td:last-child,
+        table tr th:last-child {
+            border-right: 0;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: rgba(0, 8, 93, .9);
+            color: #00e3ff;
+            text-align: center;
+            border: 2px solid #00e3ff;
+            border-radius: 0 6px 6px 6px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1; 
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
         
         .paralax {
             background: url(./img/paralax2.png); 
@@ -77,15 +150,120 @@
     </style>
 </head>
 <body>
-    <div class="paralax"></div>
+    <h1 class="mainTitle">Oficina: Introdução a Computação</h1>
     
     <div class="mainContainer">
-        <h1>Comunicado:</h1>
-        <p> Este site vai conter os Links dos vídeos de todos os encontros, das atividades e dos Slides para organizar o conteúdo para quem está acompanhando a oficina! </p>
+        <h1>Links:</h1>
         <br>
-        <p> O site ainda está em construção, mas estara funcionando em breve! </p>
+        <p> (até o dia 11/12/2021) </p>
+        <p> Para receber o certificado </p>
+        <p> lembre-se de fazer a <a href="">inscrição</a>!</p>
+        <br>
+        <table>
+            <tr>
+                <th> Encontro </th>
+                <th> Vídeo </th>
+                <th> Slide </th>
+                <th> Atividade </th>
+                <th> Data </th>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 1
+                        <span class="tooltiptext">O que é Computação e sua História</span>
+                    </div>
+                </td>
+                <td> <a href="https://youtu.be/TzTTUOi6fBc"> Vídeo </a> </td>
+                <td> <a href="https://1drv.ms/p/s!Asob3LeBEYi9gpxKQkgqDfY6udwPpQ?e=7uv5WF"> Slide </a> </td>
+                <td> <a href="https://forms.gle/P8BbCJVU66nPth6s6"> Atividade </a> </td>
+                <td> 29/11/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 2
+                        <span class="tooltiptext">Hardware e Software</span>
+                    </div>
+                </td>
+                <td> <a href="https://youtu.be/vvp6Wa_dDmY"> Vídeo </a> </td>
+                <td> <a href="https://1drv.ms/p/s!Asob3LeBEYi9gpxPSugDle3ecOgfgA?e=3rD7F5"> Slide </a> </td>
+                <td> <a href="https://forms.gle/DvHrggp4JUCHqbFk6"> Atividade </a> </td>
+                <td> 30/11/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 3
+                        <span class="tooltiptext">Redes de Comunicação</span>
+                    </div>
+                </td>
+                <td> <a href="https://youtu.be/ImBWRibbQGQ"> Vídeo </a> </td>
+                <td> <a href="https://1drv.ms/p/s!Asob3LeBEYi9gpxSqWn8oL_I4-xeCw?e=dUmJ0L"> Slide </a> </td>
+                <td> <a href="https://forms.gle/5an97G4pRE44owU87"> Atividade </a> </td>
+                <td> 01/12/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 4
+                        <span class="tooltiptext">Introdução a Programação</span>
+                    </div>
+                </td>
+                <td> <a href="https://youtu.be/BY8wllyx9X0"> Vídeo </a> </td>
+                <td> <a href="https://1drv.ms/p/s!Asob3LeBEYi9gpxWS9b2hj_GhnMGtw?e=2lMkju"> Slide </a> </td>
+                <td> <a href="https://forms.gle/2d3q7V7w3w2ZZG3x9 "> Atividade </a> </td>
+                <td> 02/12/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 5
+                        <span class="tooltiptext">Desenvolvendo uma página Parte 1</span>
+                    </div>
+                </td>
+                <td> <a href="https://youtu.be/OCKMKhtJ6Ks"> Vídeo </a> </td>
+                <td> <a href="https://1drv.ms/p/s!Asob3LeBEYi9gpxcpLrocl2R2ds2Tg?e=IckADA"> Slide </a> </td>
+                <td> <a href="https://forms.gle/2g2PT21YcXArUtBe9"> Atividade </a> </td>
+                <td> 03/12/2021 </td>
+            </tr>
+
+            <!-- ################################################################################################## -->
+
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 6
+                        <span class="tooltiptext">Desenvolvendo uma página Parte 2</span>
+                    </div>
+                </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> 06/12/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 7
+                        <span class="tooltiptext">Novas oportunidades de emprego</span>
+                    </div>
+                </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> 07/12/2021 </td>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="tooltip"> DIA 8
+                        <span class="tooltiptext">Atividade Final e finalização</span>
+                    </div>
+                </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> <div class="tooltip"> Em breve <span class="tooltiptext">Ainda não ocorreu</span> </div> </td>
+                <td> 08/12/2021 </td>
+            </tr>
+        </table>
+        <br>
+        <p> Playlist com <a href="">todos os vídeos</a>! </p>
     </div>
 
+    <div class="paralax"></div>
     <div class="paralax paralaxBottom"></div>
 </body>
 </html>
