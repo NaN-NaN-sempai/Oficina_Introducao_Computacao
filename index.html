@@ -182,13 +182,30 @@
     <div class="mainContainer">
         <h1>Links:</h1>
         <br>
-        <p class="redText"> (até o dia 11/12/2021) </p>
+        <div class="tooltip"> <p class="redText"> (até o dia 11/12/2021) </p>
+            <span class="tooltiptext timeLeft">Carregando...</span>
+        </div>
         <p> Para receber o certificado </p>
-        <p> lembre-se de fazer a <a class="redText" href="https://forms.gle/ZY8jm66FRjZ6Dq9E9">inscrição</a> e de </p>
+        <span> lembre-se de fazer a
+            <div class="tooltip"> <a class="redText" href="https://forms.gle/ZY8jm66FRjZ6Dq9E9">inscrição</a>
+                <span class="tooltiptext timeLeft">Carregando...</span>
+            </div>
+         e de </span>
         <p> fazer todas as atividades da lista abaixo: </p>
         <br>
         <table>
-            <tr>
+            <tr><!-- 
+                t = new Date(2021, 11, 11, 23,59,56);
+                b = new Date(2023, 11, 11, 23,59,56);
+                diff = new Date(t.getTime() - b.getTime())
+                
+                console.log(diff.getUTCFullYear() - 1970); // Gives difference as year
+                // 3
+                
+                console.log(diff.getUTCMonth()); // Gives month count of difference
+                // 6
+                
+                console.log(diff.getUTCDate() - 1); -->
                 <th> Encontro </th>
                 <th> Vídeo </th>
                 <th> Slide </th>
@@ -295,4 +312,24 @@
     <div class="paralax"></div>
     <div class="paralax paralaxBottom"></div>
 </body>
+<script>
+    Array.from(document.querySelectorAll(".timeLeft")).forEach(e => {
+        
+        var end = new Date(2021, 11, 11, 23,59,56);
+
+        var diffDays = (d1, d2) => {
+            var t2 = d2.getTime();
+            var t1 = d1.getTime();
+
+            return parseInt((t2-t1)/(24*3600*1000));
+        }
+
+        var diff = diffDays(new Date(), end);
+
+        var showText = diff > 0? "Faltam "+ diff + " dias para terminar o prazo de inscrição!":
+                       diff = 0? "Termina hoje!" : "Você está atrasado, já se passaram "+ Math.abs(diff) + " dias!" ;
+
+        e.innerHTML = showText;        
+    });
+</script>
 </html>
