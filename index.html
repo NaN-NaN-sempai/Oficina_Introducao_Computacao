@@ -317,7 +317,7 @@
         var diff = diffDays(new Date(), end);
 
         var showText = diff > 0? "Faltam "+ diff + " dias para terminar o prazo de inscrição!":
-                       diff = 0? "Termina hoje!" : "Você está atrasado, já se passaram "+ Math.abs(diff) + " dias!" ;
+                       diff == 0? "Termina hoje!" : "Você está atrasado, já se passaram "+ Math.abs(diff) + " dias!" ;
 
         e.innerHTML = showText;        
     });
